@@ -40,6 +40,14 @@ class App extends Component {
             <Route path="/contact" component={Contact}></Route>
             <Route path="/music" component={Music}></Route>
           </div>
+          <hr></hr>
+          <h2>Visit Me On Social Media:</h2>
+          <div className="flex-container">
+            <a href="https://www.facebook.com/paulwalshmusic" className="fa fa-facebook">Facebook</a>
+            <a href="https://avanttemporal.bandcamp.com" className="	fa fa-bandcamp">Bandcamp</a>
+            <a href="https://github.com/ProgRockPaul" className="	fa fa-github">GitHub</a>
+            <a href="https://www.youtube.com/channel/UCSCgCC24REe-_Iy05MR_mKQ" className="	fa fa-youtube">Youtube</a>
+          </div>
         </div>
       </Router>
     )
