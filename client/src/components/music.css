@@ -36,7 +36,7 @@
   color: white;
 }
 
-.music-container {
+.music-container iframe {
   display: flex;
   justify-content: center;
   padding-bottom: 10px;

@@ -1,0 +1,32 @@
+
+
+.parallax1 {
+  background-image: url("https://68.media.tumblr.com/f68488b1055d6f17a8328e546db5559d/tumblr_n4n6f8b34l1t11530o1_1280.jpg");
+  /* Set a specific height */
+  height: 500px;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.parallax2 {
+  background-image: url("http://wallpapercave.com/wp/Ex9MlTC.jpg");
+  /* Set a specific height */
+  height: 500px;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding-bottom: 10px;
+}

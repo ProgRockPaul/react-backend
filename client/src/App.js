@@ -33,7 +33,7 @@ class App extends Component {
             <a href="#contact">
               <Link to ="/contact" >Contact Me</Link> {' '}
             </a>
-            <a href="javascript:void(0);" className="icon" onClick={myFunction}>☰</a>
+            <a href="javascript:void(0);" className="icon" onClick={myFunction}><button className="fa fa-beer"></button></a>
           </div>
           <div>
             <Route exact path="/" component={Home}></Route>
