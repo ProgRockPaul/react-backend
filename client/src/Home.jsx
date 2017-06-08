@@ -6,7 +6,7 @@ class Home extends Component {
       <div>
         <div className="parallax1">
           <div className="flex-container">
-            <h1>The Real Paul Walsh Homepage</h1>
+            <h2>The Real Paul Walsh Homepage</h2>
 
           </div>
         </div>

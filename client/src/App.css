@@ -7,7 +7,14 @@ body {
   font: normal x-small verdana,arial,helvetica,sans-serif;
   background-color: black;
   min-height: 100%;
-  border: 10px;
+}
+
+h2 {
+    font-family: "Josefin Sans","HelveticaNeue","Helvetica Neue",sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
 }
 
 .flex-container {
@@ -15,6 +22,7 @@ body {
   flex-direction: row;
   justify-content: space-around;
   padding-bottom: 10px;
+  flex-wrap: wrap;
 }
 .image-container {
   display: flex;

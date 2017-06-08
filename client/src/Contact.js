@@ -10,7 +10,7 @@ class Contact extends Component {
           Email:<br/>
           <input type="text" name="email" /><br/>
           Message:<br/>
-          <input type="text" name="message" size="100" /><br/><br/>
+        <input type="text" name="message" size="50" /><br/><br/>
           <input type="submit" value="Send Me A Message" />
           </form>
         </div>
