@@ -15,7 +15,6 @@
   text-decoration: none;
   border-radius: 90%;
   width: 20%;
-
 }
 
 .fa:hover {
@@ -30,10 +29,14 @@
     background: #3B5998;
     color: white;
 }
+.fa-linkedin-square {
+    background:  #3B5998;
+    color: white;
+}
 
-/* Twitter */
+
 .fa-bandcamp {
-    background: black;
+    background: green;
     color: white;
 }
 
@@ -47,10 +50,6 @@
   color: white;
 }
 
-.fa-linkedin-square {
-  background: green;
-  color: white;
-}
 
 .topnav {
   overflow: hidden;
@@ -58,7 +57,6 @@
 }
 
 .topnav a {
-  font-family: "Merriweather",serif;
   float: left;
   display: block;
   color: #f2f2f2;

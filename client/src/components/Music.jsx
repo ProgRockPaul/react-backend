@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import './music.css'
 import {
-  BrowserRouter as Router,
-  Route,
   Link
 } from 'react-router-dom';
 

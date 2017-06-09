@@ -10,6 +10,7 @@ import './App.css';
 import './nav.css';
 import Music from './components/Music';
 import Api from './Api';
+import Footer from './Footer';
 
 class App extends Component {
   render(){
@@ -47,15 +48,7 @@ class App extends Component {
             <Route path="/api" component={Api}></Route>
 
           </div>
-          <hr></hr>
-          <h2>Visit Me On Social Media:</h2>
-          <div className="flex-container">
-            <a href="https://github.com/ProgRockPaul" className="	fa fa-github">GitHub</a>
-            <a href="https://www.linkedin.com/in/pauljosephwalsh/" className="fa fa-linkedin-square">LinkedIn</a>
-            <a href="https://www.facebook.com/paulwalshmusic" className="fa fa-facebook">Facebook</a>
-            <a href="https://avanttemporal.bandcamp.com" className="	fa fa-bandcamp">Bandcamp</a>
-            <a href="https://www.youtube.com/channel/UCSCgCC24REe-_Iy05MR_mKQ" className="	fa fa-youtube">Youtube</a>
-          </div>
+          <Footer />
         </div>
       </Router>
     )
