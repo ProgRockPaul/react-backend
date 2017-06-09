@@ -28,7 +28,11 @@ class Api extends Component {
       let reddit = json.data; //json Data
       let child = reddit.children; //target specifically the children within the json data...
       console.log(child[9]);
-      let childArray = [child[0].data, child[1].data, child[2].data,  child[3].data, child[4].data, child[5].data, child[6].data, child[7].data, child[8].data, child[9].data]; // these are the children or the individual posts on Reddit
+      let childArray = [];
+      for(var i = 0; i < child.length; i++){
+        childArray.push(child[i].data);
+      }
+       // these are the children or the individual posts on Reddit
       var url1 = "https://www.reddit.com" + childArray[0].permalink.toString();
       var url2 = "https://www.reddit.com" + childArray[1].permalink.toString();
       var url3 = "https://www.reddit.com" + childArray[2].permalink.toString();
@@ -65,9 +69,10 @@ class Api extends Component {
         post10: r10,
       });
     }).catch((ex) => {
-      console.log('An error occured while parsing!', ex)
+      console.log('An error occured while parsing!', ex) //errors
     });
   }
+
   render() {
     let post1 = this.state.post1;
     let post2 = this.state.post2;
@@ -84,16 +89,17 @@ class Api extends Component {
       <div>
         <h1>Top 10 current Posts on <a href="https://www.reddit.com/r/webdev/">r/webdev</a>
         </h1>
-        <ul>{post1}</ul>
+
+          <ul>{post1}</ul>
           <ul>{post2}</ul>
-            <ul>{post3}</ul>
-                <ul>{post4}</ul>
-                  <ul>{post5}</ul>
-                    <ul>{post6}</ul>
-                      <ul>{post7}</ul>
-                        <ul>{post8}</ul>
-                          <ul>{post9}</ul>
-                            <ul>{post10}</ul>
+          <ul>{post3}</ul>
+          <ul>{post4}</ul>
+          <ul>{post5}</ul>
+          <ul>{post6}</ul>
+          <ul>{post7}</ul>
+          <ul>{post8}</ul>
+          <ul>{post9}</ul>
+          <ul>{post10}</ul>
       </div>
     );
   }
