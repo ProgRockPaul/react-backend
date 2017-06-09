@@ -9,8 +9,8 @@ import Contact from './Contact';
 import './App.css';
 import './nav.css';
 import Music from './components/Music';
-import Api from './Api';
 import Footer from './Footer';
+import Topics from './Topics';
 
 class App extends Component {
   render(){
@@ -36,8 +36,8 @@ class App extends Component {
             <a href="#contact">
               <Link to ="/contact" >Contact Me</Link> {' '}
             </a>
-            <a href="#api">
-              <Link to ="/api" >Api </Link> {' '}
+            <a href="#topics">
+              <Link to ="/topics" >React Portfolio</Link> {' '}
             </a>
             <a href="javascript:void(0);" className="icon" onClick={myFunction}><button className="fa fa-beer"></button></a>
           </div>
@@ -45,7 +45,8 @@ class App extends Component {
             <Route exact path="/" component={Home}></Route>
             <Route path="/contact" component={Contact}></Route>
             <Route path="/music" component={Music}></Route>
-            <Route path="/api" component={Api}></Route>
+            <Route path="/topics" component={Topics}></Route>
+
 
           </div>
           <Footer />
