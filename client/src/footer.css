@@ -1,3 +1,7 @@
+
+body {
+text-align: center;}
+
 .fa-container {
   display: flex;
   flex-direction: row;
