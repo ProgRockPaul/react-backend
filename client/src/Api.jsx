@@ -5,16 +5,7 @@ class Api extends Component {
     constructor(props) {
     super(props);
     this.state = {
-      post1: '',
-      post2: '',
-      post3: '',
-      post4: '',
-      post5: '',
-      post6: '',
-      post7: '',
-      post8: '',
-      post9: '',
-      post10: '',
+      posts: '',
     }
   }
 
@@ -27,40 +18,34 @@ class Api extends Component {
     }).then((json) => {
       let reddit = json.data; //json Data
       let child = reddit.children; //target specifically the children within the json data...
-      console.log(child[9]);
+
       let childArray = [];
       for(var i = 0; i < child.length; i++){
         childArray.push(child[i].data);
       }
        // these are the children or the individual posts on Reddit
-      var permaUrl = [];
-      for(var i = 0; i < childArray.length; i++){
-        permaUrl.push("https://www.reddit.com" + childArray[0].permalink.toString());
-      }
-      console.log([permaUrl])
 
-      var r1 = <i className="fa fa-thumbs-o-up">1: <a href= {permaUrl[0]} >{childArray[0].title}</a> {childArray[0].ups} upvotes </i>;
-        var r2 = <i className="fa fa-thumbs-o-up">2: <a href= {permaUrl[0]}>{childArray[1].title}</a> {childArray[1].ups} upvotes</i>;
-          var r3 = <i className="fa fa-thumbs-o-up">3: <a href= {permaUrl[0]}>{childArray[2].title}</a>  {childArray[2].ups} upvotes</i>;
-            var r4 = <i className="fa fa-thumbs-o-up">4: <a href= {permaUrl[0]}>{childArray[3].title}</a> {childArray[3].ups} upvotes</i>;
-              var r5 = <i className="fa fa-thumbs-o-up">5: <a href= {permaUrl[0]}>{childArray[4].title}</a> {childArray[4].ups} upvotes</i>;
-                var r6 = <i className="fa fa-thumbs-o-up">6: <a href= {permaUrl[0]}>{childArray[5].title}</a> {childArray[5].ups} upvotes</i>;
-                  var r7 = <i className="fa fa-thumbs-o-up">7: <a href= {permaUrl[0]}>{childArray[6].title}</a> {childArray[6].ups} upvotes</i>;
-                    var r8 = <i className="fa fa-thumbs-o-up">8: <a href= {permaUrl[0]}>{childArray[7].title}</a> {childArray[7].ups} upvotes</i>;
-                      var r9 = <i className="fa fa-thumbs-o-up">9: <a href= {permaUrl[0]}>{childArray[8].title}</a> {childArray[8].ups} upvotes</i>;
-                        var r10 = <i className="fa fa-thumbs-o-up">10: <a href= {permaUrl[0]}>{childArray[9].title}</a> {childArray[9].ups} upvotes</i>;
+      let permaUrl = [];
+      for(var i = 0; i < childArray.length; i++){
+        permaUrl.push("https://www.reddit.com" + childArray[i].permalink.toString());
+      }
+
+      let webdevPosts = [];
+      let listNumbers = [1,2,3,4,5,6,7,8,9,10]
+      for (var i = 0, j = 1; i < childArray.length, j < childArray.length + 1; i++, j++){
+        webdevPosts.push(
+          <ul key={i}>
+            <a href= {permaUrl[i]}> <i className="fa ">  {[j]}.</i> {childArray[i].title} <span className="fa fa-thumbs-o-up">
+              {childArray[i].ups} upvotes
+            </span> </a>
+          </ul>
+        )
+      }
+
+
 
       base.setState({
-        post1: r1,
-        post2: r2,
-        post3: r3,
-        post4: r4,
-        post5: r5,
-        post6: r6,
-        post7: r7,
-        post8: r8,
-        post9: r9,
-        post10: r10,
+        posts: webdevPosts
       });
     }).catch((ex) => {
       console.log('An error occured while parsing!', ex) //errors
@@ -68,32 +53,17 @@ class Api extends Component {
   }
 
   render() {
-    let post1 = this.state.post1;
-    let post2 = this.state.post2;
-    let post3 = this.state.post3;
-    let post4 = this.state.post4;
-    let post5 = this.state.post5;
-    let post6 = this.state.post6;
-    let post7 = this.state.post7;
-    let post8 = this.state.post8;
-    let post9 = this.state.post9;
-    let post10 = this.state.post10;
+    let posts = this.state.posts
 
     return (
-      <div>
-        <h1>Top 10 current Posts on <a href="https://www.reddit.com/r/webdev/">r/webdev</a>
-        </h1>
+      <div className="post-container">
+        <a href="https://www.reddit.com/r/webdev/">
 
-          <ul>{post1}</ul>
-          <ul>{post2}</ul>
-          <ul>{post3}</ul>
-          <ul>{post4}</ul>
-          <ul>{post5}</ul>
-          <ul>{post6}</ul>
-          <ul>{post7}</ul>
-          <ul>{post8}</ul>
-          <ul>{post9}</ul>
-          <ul>{post10}</ul>
+          <h1>Top 10 current Posts on r/webdev</h1>
+        </a>
+
+          <ul>{posts}</ul>
+
       </div>
     );
   }

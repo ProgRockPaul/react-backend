@@ -12,7 +12,7 @@ class Topics extends React.Component{
       <div>
         <h1>Here are some of the cool things I've made using React!</h1>
         <Api />
-        
+
       </div>
     )
   }

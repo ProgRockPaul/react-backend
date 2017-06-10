@@ -14,19 +14,23 @@ class Music extends Component {
             <h1>I am Paul Walsh</h1>
             <p>And I'm a Musician Too</p>
             <div className="music-container">
-                <p>Soundcloud:
-                  <iframe name="audio" width="299" height="299" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/1198477&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
-                </p>
-                <p>Youtube:
-                  <iframe name="video" width="299" height="299" src="https://www.youtube.com/embed/videoseries?list=PLZqP2eTUCIkEDLf8j085ZbbvOGZ-uqSkl" frameborder="0" allowfullscreen></iframe>
-                </p>
+                <div>
+                  <p>Soundcloud:
+                  </p>
+                  <iframe name="audio" width="60%" height="299" scrolling="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/1198477&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
+
+                </div>
+                <div>
+                  <p>Youtube:
+                  </p>
+                  <iframe name="video" width="60%" height="400" src="https://www.youtube.com/embed/videoseries?list=PLZqP2eTUCIkEDLf8j085ZbbvOGZ-uqSkl" ></iframe>
+
+                </div>
             </div>
 
-            <button>
-              <a href="#contact">
-                <Link to ="/contact" >Contact Me</Link> {' '}
-              </a>
-            </button>
+
+                <Link to ="/contact" ><button>Contact Me</button></Link> {' '}
+
           </div>
         </div>
       </div>

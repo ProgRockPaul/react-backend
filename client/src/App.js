@@ -27,18 +27,12 @@ class App extends Component {
       <Router>
         <div>
           <div className='topnav' id='myTopnav'>
-            <a href="#home">
               <Link to ="/" >Home Page</Link> {' '}
-            </a>
-            <a href="#music">
               <Link to ="/music">My Music</Link> {' '}
-            </a>
-            <a href="#contact">
               <Link to ="/contact" >Contact Me</Link> {' '}
-            </a>
-            <a href="#topics">
+
               <Link to ="/topics" >React Portfolio</Link> {' '}
-            </a>
+
             <a href="javascript:void(0);" className="icon" onClick={myFunction}><button className="fa fa-beer"></button></a>
           </div>
           <div>
