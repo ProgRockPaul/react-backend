@@ -28,10 +28,10 @@ class App extends Component {
         <div>
           <div className='topnav' id='myTopnav'>
               <Link to ="/" >Home Page</Link> {' '}
+              <Link to ="/topics" >React Portfolio</Link> {' '}
               <Link to ="/music">My Music</Link> {' '}
               <Link to ="/contact" >Contact Me</Link> {' '}
 
-              <Link to ="/topics" >React Portfolio</Link> {' '}
 
             <a href="javascript:void(0);" className="icon" onClick={myFunction}><button className="fa fa-beer"></button></a>
           </div>

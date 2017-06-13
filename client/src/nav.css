@@ -75,6 +75,7 @@
   text-align: center;
   text-decoration: none;
   font-size: 22px;
+
   animation-name: rotate;
   animation-duration: 2s;
   animation-iteration-count: infinite;
@@ -84,6 +85,8 @@
 .topnav .fa {
   background:  #e6e6ff;
 }
+
+
 
 @keyframes rotate {
   0% {transform: rotateX(0deg);}

@@ -8,42 +8,43 @@ class Api extends Component {
       posts: '',
     }
   }
-
   componentDidMount() {
     let base = this;
-    let api = 'https://www.reddit.com/r/webdev/top.json?limit=10&t=week';
+    let api = 'https://www.reddit.com/r/webdev/top.json?limit=100&t=week';
     fetch(api)
     .then((response) => {
       return response.json() //get me the json from reddit
-    }).then((json) => {
-      let reddit = json.data; //json Data
-      let child = reddit.children; //target specifically the children within the json data...
-
-      let childArray = [];
-      for(var i = 0; i < child.length; i++){
-        childArray.push(child[i].data);
+      }).then((json) => {
+        let reddit = json.data; //json Data
+        let child = reddit.children;
+        //target specifically the children within the json data...
+        let childArray = [];
+        for(let i = 0; i < child.length; i++){
+          childArray.push(child[i].data);
       }
        // these are the children or the individual posts on Reddit
+      console.log(child)
 
       let permaUrl = [];
-      for(var i = 0; i < childArray.length; i++){
+      for(let i = 0; i < childArray.length; i++){
         permaUrl.push("https://www.reddit.com" + childArray[i].permalink.toString());
       }
-
+      //urls with permalink added
       let webdevPosts = [];
-      let listNumbers = [1,2,3,4,5,6,7,8,9,10]
-      for (var i = 0, j = 1; i < childArray.length, j < childArray.length + 1; i++, j++){
+      for (let i = 0; i < childArray.length; i++){
         webdevPosts.push(
           <ul key={i}>
-            <a href= {permaUrl[i]}> <i className="fa ">  {[j]}.</i> {childArray[i].title} <span className="fa fa-thumbs-o-up">
-              {childArray[i].ups} upvotes
-            </span> </a>
+            <div>
+              <img src={childArray[i].thumbnail} onError={(event)=>event.target.setAttribute("src",'https://upload.wikimedia.org/wikipedia/commons/4/43/Reddit.svg')}/>
+            </div>
+            <i>{[i+1]}. </i>
+            <a href= {permaUrl[i]}>
+              {childArray[i].title}
+                <span className="fa fa-thumbs-o-up">{childArray[i].ups} upvotes</span>
+            </a>
           </ul>
         )
       }
-
-
-
       base.setState({
         posts: webdevPosts
       });
@@ -54,21 +55,14 @@ class Api extends Component {
 
   render() {
     let posts = this.state.posts
-
     return (
-      <div className="post-container">
-        <a href="https://www.reddit.com/r/webdev/">
-
-          <h1>Top 10 current Posts on r/webdev</h1>
-        </a>
-
-          <ul>{posts}</ul>
-
+      <div>
+          <h1>
+            Top 100 Posts THIS WEEK on r/webdev!!
+          </h1>
+          <ul className="post-container">{posts}</ul>
       </div>
     );
   }
 }
-
-
-
 export default Api;
