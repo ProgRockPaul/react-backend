@@ -24,22 +24,21 @@ class Api extends Component {
        // these are the children or the individual posts on Reddit
       console.log(child)
 
-      let permaUrl = [];
-      for(let i = 0; i < childArray.length; i++){
-        permaUrl.push("https://www.reddit.com" + childArray[i].permalink.toString());
-      }
+      let permaUrl = childArray.map(function(child){
+        return "https://www.reddit.com" + child.permalink.toString()
+      })
       //urls with permalink added
       let webdevPosts = [];
       for (let i = 0; i < childArray.length; i++){
         webdevPosts.push(
-          <ul key={i}>
+          <ul key={i} className="posts">
             <div>
               <img src={childArray[i].thumbnail} onError={(event)=>event.target.setAttribute("src",'https://upload.wikimedia.org/wikipedia/commons/4/43/Reddit.svg')}/>
             </div>
             <i>{[i+1]}. </i>
             <a href= {permaUrl[i]}>
-              {childArray[i].title}
-                <span className="fa fa-thumbs-o-up">{childArray[i].ups} upvotes</span>
+              <span>{childArray[i].title}</span>
+              <span className="fa fa-thumbs-o-up">{childArray[i].ups} upvotes</span>
             </a>
           </ul>
         )
