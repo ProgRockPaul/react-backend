@@ -18,10 +18,9 @@ class Api extends Component {
         let reddit = json.data; //json Data
         let child = reddit.children;
         //target specifically the children within the json data...
-        let childArray = [];
-        for(let i = 0; i < child.length; i++){
-          childArray.push(child[i].data);
-      }
+        let childArray = child.map(function(x){
+          return x.data
+        })
        // these are the children or the individual posts on Reddit
       console.log(child)
 
