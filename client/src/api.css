@@ -1,4 +1,4 @@
-.fa {
+body {
   font-size: 16px;
 }
 
@@ -13,13 +13,15 @@ a {
 }
 
 .post-container {
+  margin: 0;
+  padding: 0;
 
   display: flex;
   flex-direction: row;
+  justify-content: center;
   align-items: flex-start;
   flex-wrap: wrap;
   height: 100%;
-  overflow:
 }
 
 img {
@@ -32,13 +34,26 @@ img {
 }
 
 .posts {
- width: 15%;
- border: 2px white;
+  padding-top: 10px;
+ width: 300px;
+ height: 300px;
+ border: 2px solid white;
+ margin: 0;
+ padding: 0;
+
 }
 
 @media only screen and (max-width : 840px) {
   img {
     height: 75px;
     width: 75px;
+  }
+  body {
+    font-size: 12px;
+  }
+  .posts {
+    width: 200px;
+    height: 200px;
+
   }
 }

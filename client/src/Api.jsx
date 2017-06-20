@@ -15,8 +15,7 @@ class Api extends Component {
     .then((response) => {
       return response.json() //get me the json from reddit
       }).then((json) => {
-        let reddit = json.data; //json Data
-        let child = reddit.children;
+        let child = json.data.children; //json Data
         //target specifically the children within the json data...
         let childArray = child.map(function(x){
           return x.data
