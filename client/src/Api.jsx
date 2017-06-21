@@ -31,11 +31,11 @@ class Api extends Component {
       for (let i = 0; i < childArray.length; i++){
         webdevPosts.push(
           <ul key={i} className="posts">
+            <a href= {permaUrl[i]}>
             <div>
               <img src={childArray[i].thumbnail} onError={(event)=>event.target.setAttribute("src",'https://upload.wikimedia.org/wikipedia/commons/4/43/Reddit.svg')}/>
             </div>
             <i>{[i+1]}. </i>
-            <a href= {permaUrl[i]}>
               <span>{childArray[i].title}</span>
               <span className="fa fa-thumbs-o-up">{childArray[i].ups} upvotes</span>
             </a>

@@ -10,8 +10,7 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  overflow:
-}
+ }
 
 .parallax2 {
   background-image: url("https://scontent.fybz1-1.fna.fbcdn.net/v/t1.0-9/1915118_629861350665_3657598_n.jpg?oh=256572c279a8dfa0c71b6e3bbff31854&oe=59E68892");
@@ -28,9 +27,8 @@
   padding: 0;
   display: flex;
   flex-direction: column;
-  padding: 20px;
   overflow: scroll;
-  height: 400px;
+  height: 550px;
   text-align: center;
 }
 
