@@ -9,7 +9,6 @@ class Home extends Component {
             <h1>The Real Paul Walsh Homepage</h1>
             <h2>About Paul</h2>
 
-            <hr></hr>
             <p>
               Way back when I started making music as a kid I could recognize my own passion for new technology, and the potential to learn new things on the internet. I spent countless hours on forums and articles researching the ins and outs of recording and digging deep into topics related to whatever musical project had my focus at the time. I discovered very early on that everything I could want to know is available on the web if you know the right places to look.
             </p>
@@ -29,7 +28,9 @@ class Home extends Component {
         </div>
         <div className="">
         </div>
-        <div className="parallax2"></div>
+        <div className="parallax2">
+            <p>relax and text text text</p>
+        </div>
       </div>
 
     )

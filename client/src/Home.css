@@ -3,10 +3,9 @@
 .parallax1 {
   background-image: url("https://scontent.fybz1-1.fna.fbcdn.net/v/t1.0-9/13133210_10150640299429946_5889149715149311224_n.jpg?oh=affaaa127387da27ee2c3df103999230&oe=59D78C8A");
   /* Set a specific height */
-  height: 500px;
+  height: 67rem;
 
   /* Create the parallax scrolling effect */
-  background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -14,7 +13,7 @@
 
 .parallax2 {
   background-image: url("https://scontent.fybz1-1.fna.fbcdn.net/v/t1.0-9/1915118_629861350665_3657598_n.jpg?oh=256572c279a8dfa0c71b6e3bbff31854&oe=59E68892");
-  height: 500px;
+  height: 110rem;
 
   background-attachment: fixed;
   background-position: center;
@@ -27,11 +26,12 @@
   padding: 0;
   display: flex;
   flex-direction: column;
-  overflow: scroll;
   height: 550px;
   text-align: center;
 }
 
 p {
-  font-size: 12px;
+  font-size: 16px;
+  color: white;
+
 }

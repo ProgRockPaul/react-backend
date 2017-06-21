@@ -2,6 +2,8 @@
   text-align: center;
   padding: 0;
   margin: 0;
+  transition: 0.3s;
+
 }
 
 body {
@@ -17,4 +19,10 @@ h2 {
     font-style: normal;
     letter-spacing: 0.1em;
     text-transform: uppercase;
+}
+
+@media (max-width: 320px) {
+  .topnav {
+    width: 320px;
+  }
 }

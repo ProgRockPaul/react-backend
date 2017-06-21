@@ -21,7 +21,7 @@ class Api extends Component {
           return x.data
         })
        // these are the children or the individual posts on Reddit
-      console.log(child)
+      // console.log(child)
 
       let permaUrl = childArray.map(function(child){
         return "https://www.reddit.com" + child.permalink.toString()
@@ -33,7 +33,7 @@ class Api extends Component {
           <ul key={i} className="posts">
             <a href= {permaUrl[i]}>
             <div>
-              <img src={childArray[i].thumbnail} onError={(event)=>event.target.setAttribute("src",'https://upload.wikimedia.org/wikipedia/commons/4/43/Reddit.svg')}/>
+              <img alt={i} src={childArray[i].thumbnail} onError={(event)=>event.target.setAttribute("src",'https://upload.wikimedia.org/wikipedia/commons/4/43/Reddit.svg')}/>
             </div>
             <i>{[i+1]}. </i>
               <span>{childArray[i].title}</span>
@@ -54,10 +54,12 @@ class Api extends Component {
     let posts = this.state.posts
     return (
       <div>
-          <h1>
-            Top 100 Posts THIS WEEK on r/webdev!!
-          </h1>
-          <ul className="post-container">{posts}</ul>
+        <div>
+            <h1>
+              Top 100 Posts THIS WEEK on r/webdev!!
+            </h1>
+            <ul className="post-container">{posts}</ul>
+        </div>
       </div>
     );
   }

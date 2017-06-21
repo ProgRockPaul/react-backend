@@ -25,8 +25,8 @@
 @keyframes mymove {
   0%   {transform: scale(1.0);}
   100% {transform: scale(1.5);}
-  100% {border-color: red;}
-  100% {box-shadow: 0 0 1rem #ffc600;}
+  100% {border-color: rgb(66, 134, 244);}
+  100% {box-shadow: 0 0 1rem rgb(66, 134, 244);}
 }
 
 kbd {
