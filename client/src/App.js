@@ -21,16 +21,13 @@ class App extends Component {
           x.className = "topnav";
       }
     }
-
     return(
       <Router>
         <div>
           <div className='topnav' id='myTopnav'>
               <Link to ="/" >Home Page</Link> {' '}
-              <Link to ="/topics" >React Portfolio</Link> {' '}
-              <Link to ="/music">My Music</Link> {' '}
-
-
+              <Link to ="/topics" >Web Developement Portfolio</Link> {' '}
+              <Link to ="/music">Music Portfolio</Link> {' '}
             <a className="icon" onClick={myFunction}><button className="fa fa-beer"></button></a>
           </div>
           <div>
